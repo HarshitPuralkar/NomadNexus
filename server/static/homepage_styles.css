@@ -85,7 +85,7 @@
 }
 
 .sectionmain{
-    background: url("main-section.jpg") no-repeat center;
+    background: url("/static/main-section.jpg") no-repeat center;
     background-size: cover;
     width: 100%;
 }

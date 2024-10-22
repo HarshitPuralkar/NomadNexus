@@ -13,7 +13,8 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+          <form method="POST" name="sign-up">
+            {% csrf_token %}
                 <h1>Create Account</h1>
                 <!-- <div class="social-icons">
                     <a href="#" class="icon">
@@ -30,15 +31,16 @@
                     </a>
                 </div> -->
                 <span>Use Your Email for Registration</span>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email ID">
-                <input type="password" placeholder="New Password">
-                <input type="password" placeholder="Confirm Password">
-                <button class="sign-button">Sign Up</button>
+                <input type="text" placeholder="Name" name="name" >
+                <input type="email" placeholder="Email ID" name="email">
+                <input type="password" placeholder="New Password" name="pass">
+                <input type="password" placeholder="Confirm Password" name="pass2">
+                <button class="sign-button" name="sign-up">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+          <form method="POST" name="login">
+            {% csrf_token %}
                 <h1>Sign In</h1>
                 <!-- <div class="social-icons">
                     <a href="#" class="icon">
@@ -55,10 +57,10 @@
                     </a>
                 </div> -->
                 <span>Use Your Email and Password</span>
-                <input type="email" placeholder="Email ID">
-                <input type="password" placeholder="Password">
+                <input type="email" placeholder="Email ID" name="email">
+                <input type="password" placeholder="Password"  name="pass" >
                 <a href="#">Forget Password?</a>
-                <button class="sign-button">Sign In</button>
+                <button class="sign-button" name="login">Sign In</button>
             </form>
         </div>
         <div class="toggle-container">
@@ -79,6 +81,6 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="{% static 'script.js' %}"></script>
 </body>
 </html>

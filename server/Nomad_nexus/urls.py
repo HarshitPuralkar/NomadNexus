@@ -22,5 +22,13 @@ from . import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.home, name = "home"),
-    path("flights/", views.flights, name = "flights")
+    path("flights/", views.flights, name = "flights"),
+    path("trains/", views.trains, name = "trains"),
+    path("buses/", views.buses, name = "buses"),
+    path("itenary/", views.itenary, name = "itenary"),
+    path("add_itenary/", views.add_itenary, name = "add_itenary"),
+    path("login/", views.login, name = "login"),
+    path("payment_gateway", views.payment_gateway, name = "payment_gateway"),
+    path("payment", views.payment, name = "payment"),
+    path('logout/', views.logout_view, name='logout'),
 ]

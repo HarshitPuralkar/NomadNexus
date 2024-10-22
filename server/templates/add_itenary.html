@@ -60,16 +60,28 @@
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 items-edit">
-                    <li class="nav-item"><a class="nav-link" href="homepage.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="flights.html">Flights</a></li>
-                    <li class="nav-item"><a class="nav-link" href="trains.html">Trains</a></li>
-                    <li class="nav-item"><a class="nav-link" href="buses.html">Buses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="itenary.html">Itinerary</a></li>
-                </ul>
-            </div>
-        </div>
-        <a href="login.html" class="login-button">Login</a>
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 items-edit">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{% url 'home' %}" id="Home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link flights" aria-current="page" href="{% url 'flights' %}" id="Flight">Flights</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link trains" aria-current="page" href="{% url 'trains' %}" id="Train">Trains</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link buses" aria-current="page" href="{% url 'buses' %}" id="Bus">Buses</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link mx-lg-2" aria-current="page" href="{% url 'itenary' %}" id="Itinerary">Itinerary</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+
+      <a href="{% url 'login' %}" class="login-button">Login</a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>

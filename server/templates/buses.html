@@ -42,15 +42,27 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 items-edit">
-                            <li class="nav-item"><a class="nav-link" href="homepage.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="flights.html">Flights</a></li>
-                            <li class="nav-item"><a class="nav-link" href="trains.html">Trains</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="buses.html">Buses</a></li>
-                            <li class="nav-item"><a class="nav-link" href="itenary.html">Itinerary</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{% url 'home' %}" id="Home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link flights" aria-current="page" href="{% url 'flights' %}" id="Flight">Flights</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link trains" aria-current="page" href="{% url 'trains' %}" id="Train">Trains</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link buses" aria-current="page" href="{% url 'buses' %}" id="Bus">Buses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" aria-current="page" href="{% url 'itenary' %}" id="Itinerary">Itinerary</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <a href="login.html" class="login-button">Login</a>
+        
+                <a href="{% url 'login' %}" class="login-button">Login</a>
+        
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                     aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -99,7 +111,7 @@
                 </a>
                 <div class="collapse" id="collapseBus1">
                     <div class="d-flex justify-content-center">
-                        <a href="payment-gateway.html" class="btn btn-primary book-btn mt-2 mb-2">Book</a>
+                        <a href="{% url 'payment_gateway' %}" class="btn btn-primary book-btn mt-2 mb-2">Book</a>
                     </div>
                 </div>
 
@@ -112,7 +124,7 @@
                 </a>
                 <div class="collapse" id="collapseBus2">
                     <div class="d-flex justify-content-center">
-                        <a href="payment-gateway.html" class="btn btn-primary book-btn mt-2 mb-2">Book</a>
+                        <a href="{% url 'payment_gateway' %}" class="btn btn-primary book-btn mt-2 mb-2">Book</a>
                     </div>
                 </div>
 
@@ -125,7 +137,7 @@
                 </a>
                 <div class="collapse" id="collapseBus3">
                     <div class="d-flex justify-content-center">
-                        <a href="payment-gateway.html" class="btn btn-primary book-btn mt-2 mb-2">Book</a>
+                        <a href="{% url 'payment_gateway' %}" class="btn btn-primary book-btn mt-2 mb-2">Book</a>
                     </div>
                 </div>
             </div>

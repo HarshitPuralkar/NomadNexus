@@ -78,16 +78,28 @@
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 items-edit">
-                    <li class="nav-item"><a class="nav-link" href="homepage.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="flights.html">Flights</a></li>
-                    <li class="nav-item"><a class="nav-link" href="trains.html">Trains</a></li>
-                    <li class="nav-item"><a class="nav-link" href="buses.html">Buses</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="itenary.html">Itinerary</a></li>
-                </ul>
-            </div>
-        </div>
-        <a href="login.html" class="login-button">Login</a>
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 items-edit">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{% url 'home' %}" id="Home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link flights" aria-current="page" href="{% url 'flights' %}" id="Flight">Flights</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link trains" aria-current="page" href="{% url 'trains' %}" id="Train">Trains</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link buses" aria-current="page" href="{% url 'buses' %}" id="Bus">Buses</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link mx-lg-2" aria-current="page" href="{% url 'itenary' %}" id="Itinerary">Itinerary</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+
+      <a href="{% url 'login' %}" class="login-button">Login</a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -144,7 +156,7 @@
     </div>
 
     <div class="text-center">
-      <a href="#" class="btn explore-btn">Book Now</a>
+      <a href="{% url 'flights' %}" class="btn explore-btn">Book Now</a>
     </div>
   </section>
 
@@ -203,7 +215,7 @@
     </div>
 
     <div class="text-center">
-      <a href="#" class="btn explore-btn">Book Now</a>
+      <a href="{% url 'flights' %}" class="btn explore-btn">Book Now</a>
     </div>
   </section>
 
@@ -248,7 +260,7 @@
     </div>
 
     <div class="text-center">
-      <a href="#" class="btn explore-btn">Book Now</a>
+      <a href="{% url 'flights' %}" class="btn explore-btn">Book Now</a>
     </div>
   </section>
 
@@ -300,7 +312,7 @@
     </div>
 
     <div class="text-center">
-      <a href="#" class="btn explore-btn">Book Now</a>
+      <a href="{% url 'flights' %}" class="btn explore-btn">Book Now</a>
     </div>
   </section>
 
@@ -331,7 +343,7 @@
       </div>
   
       <div class="text-center">
-        <a href="#" class="btn explore-btn">Book Now</a>
+        <a href="{% url 'flights' %}" class="btn explore-btn">Book Now</a>
       </div>
     </section>
   
@@ -362,13 +374,13 @@
       </div>
   
       <div class="text-center">
-        <a href="#" class="btn explore-btn">Book Now</a>
+        <a href="{% url 'flights' %}" class="btn explore-btn">Book Now</a>
       </div>
     </section>
 
   <!-- Add Your Own Itinerary Button -->
   <div class="text-center" style="margin-bottom: 50px;">
-    <a href="add_itenary.html" class="btn explore-btn">Add Your Own Itinerary</a>
+    <a href="{% url 'add_itenary' %}" class="btn explore-btn">Add Your Own Itinerary</a>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
