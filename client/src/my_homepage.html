@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nomad Nexus - Travel Management</title>
+  <link rel="stylesheet" href="login_style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <h1>Nomad Nexus</h1>
+      <ul>
+        <li><a href="#trip-planning">Trip Planning</a></li>
+        <li><a href="#itinerary-management">Itinerary Management</a></li>
+        <li><a href="#booking-management">Booking Management</a></li>
+        <li><a href="#expense-tracking">Expense Tracking</a></li>
+        <li><button class="login-btn" onclick="openLoginModal()">Login/Sign In</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Section -->
+  <section id="trip-planning" class="section">
+    <h2>Trip Planning</h2>
+    <p>Search and book flights, hotels, and car rentals. Create custom itineraries with activities, tours, and places of interest.</p>
+    <button onclick="openBookingForm()">Plan Your Trip</button>
+  </section>
+
+  <section id="itinerary-management" class="section">
+    <h2>Itinerary Management</h2>
+    <p>View and modify travel itineraries, including flights, hotel bookings, activities, and events, organized by day and time.</p>
+    <button onclick="openItineraryManager()">Manage Itineraries</button>
+  </section>
+
+  <section id="booking-management" class="section">
+    <h2>Booking Management</h2>
+    <p>Book flights, hotels, and travel services through integrated third-party APIs for seamless travel planning.</p>
+    <button onclick="openBookingManagement()">Manage Bookings</button>
+  </section>
+
+  <section id="expense-tracking" class="section">
+    <h2>Expense Tracking</h2>
+    <p>Track travel expenses, categorize, set budgets, store receipts, and generate detailed expense reports.</p>
+    <button onclick="openExpenseTracker()">Track Expenses</button>
+  </section>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Login/Sign In</h2>
+      <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

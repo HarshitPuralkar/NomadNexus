@@ -1,0 +1,209 @@
+.navbar{
+    height: 70px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+.logo-edit{
+    height: 50px;
+    width: 70px;
+    margin-left: 20px;
+}
+
+.items-edit{
+    font-weight: 600;
+}
+
+.offcanvas-title{
+    background: linear-gradient(90deg, #ffd700, #ffdf00, #fff700, #ffdf00, #ffd700);
+    background-clip: text;
+    color: transparent;
+}
+
+.btn-close-custom {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+}
+
+.edit-navbar{
+    background-color: #000000;
+}
+
+.login-button{
+    color: white;
+    background-color: transparent;
+    padding: 7.5px;
+    height: 40px;
+    width: 90px;
+    text-align: center;
+    border-radius: 50px;
+    font-weight: 500;
+    border-color: #f9ba32;
+    border-style: solid;
+    border-width: 2px;
+    transition: 0.2s background-color border-width color;
+    text-decoration: none;
+    margin: 0px 5px;
+}
+
+.login-button:hover{
+    background-color: #f9ba32;
+    color: #2f3131;
+    border-width: 0px;
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+
+.nav-link{
+
+    position: relative;
+}
+
+.nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: #F8F1E5;
+    visibility: hidden;
+    transition: 0.1s ease-in-out;
+}
+
+.nav-link:hover::before, .nav-link.active::before{
+    width: 100%;
+    visibility: visible;
+}
+
+.sectionmain{
+    background: url("main-section.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+}
+
+.sectionmain::before{
+    background-color: rgba(0, 0, 0, 0.6);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.sectionmain .container{
+    height: 100vh;
+    z-index: 1;
+    position: relative
+}
+
+.sectionmain h1 {
+    font-family: 2rem;
+    background: linear-gradient(90deg, #ffd700, #ffdf00, #fff700, #ffdf00, #ffd700);
+    background-clip: text;
+    color: transparent;
+}
+
+.sectionmain h4 {
+    font-family: 0.8rem;
+}
+
+.explore-button{
+    border-width: 0px;
+    font-size: 1.1rem;
+    padding: 5px;
+    height: 40px;
+    text-align: center;
+    width: 130px;
+    font-weight: 600;
+    color: white;
+    background-color: transparent;
+    border-radius: 50px;
+    border-color: #f9ba32;
+    border-style: solid;
+    border-width: 2px;
+    text-decoration: none;
+}
+
+.explore-button:hover{
+    background-color: #f9ba32;
+    border-width: 0px;
+}
+
+.explore-section{
+    background-color: #F8F1E5;
+    height: 100vh;
+    align-content: center;
+}
+
+.explore-section .container{
+    height: 100vh;
+    z-index: 1;
+    position: relative
+}
+
+.contact-form{
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.form-edit{
+    background-color: #2f3131;
+    padding: 50px 70px;
+    border-radius: 25px;
+    color: white;
+}
+
+form {
+    text-align: center; /* Center text inside the form */
+}
+form div {
+    margin-bottom: 15px; /* Add space between inputs */
+}
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+form select, form input[type="date"], form input[type="submit"] {
+    width: 100%; /* Make inputs fill the container width */
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+form input[type="submit"] {
+    background-color: #1a1d1d;
+    color: white;
+    border: none;
+}
+
+.submit-button{
+    background-color: transparent;
+    color: white;
+    font-weight: 500;
+    border-radius: 7.5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #f9ba32;
+    width: 100px;
+    height: 35px;
+    margin: 10px 0 0 0;
+    transition: 0.2s background-color color;
+}
+
+.submit-button:hover{
+    background-color: #f9ba32;
+    color: #2f3131;
+}
