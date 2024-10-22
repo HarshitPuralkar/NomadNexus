@@ -9,7 +9,7 @@ def index(request):
             email = request.POST['email']
             password = request.POST['pass']
             password_confirmation = request.POST['pass2']
-            
+
             # Check if the password and confirmation match
             if password == password_confirmation:
                 user = User.objects.create_user(username=email, email=email, password=password)
@@ -19,7 +19,7 @@ def index(request):
         elif 'login' in request.POST:
             email = request.POST['email']
             password = request.POST['pass']
-            
+
             # Authenticate the user
             user = authenticate(request, username=email, password=password)
             if user is not None:
@@ -29,6 +29,12 @@ def index(request):
                 return render(request, "login.html")
 
     return render(request, "login.html")
+
+def home(request):
+    return render(request, "homepage.html")
+
+def flights(request):
+    return render(request, "flights.html")
 
 
 def next(request):
