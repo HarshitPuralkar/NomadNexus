@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as auth_login
 from django.contrib.auth import logout
 
+from django.http import JsonResponse
+import re
+
 def remove_email_domain(email):
     if '@' in email:
         return email.split('@')[0]
@@ -65,3 +68,30 @@ def payment(request):
 def logout_view(request):
     logout(request)  # Log the user out
     return redirect('home')
+
+def dynamic_label_view(request):
+    return render(request, 'pup.html', {'message': "hahaha"})
+
+def update_label(request):
+    input_text = request.GET.get('input_text', '')
+    res = check_password_against_conditions(input_text)
+        
+    return JsonResponse({'label_text': res})
+
+def check_password_against_conditions(input):
+    if len(input) < 8:
+        return "Password must be at least 8 characters long."
+    
+    if not re.search(r'[A-Z]', input):
+        return "Password must contain at least one uppercase letter."
+    
+    if not re.search(r'[a-z]', input):
+        return "Password must contain at least one lowercase letter."
+    
+    if not re.search(r'\d', input):
+        return "Password must contain at least one digit."
+    
+    if not re.search(r'[!@#$%^&*(),.?":{}|<>]', input):
+        return "Password must contain at least one special character."
+    
+    return "Password is valid."

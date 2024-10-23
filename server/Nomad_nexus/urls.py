@@ -31,4 +31,6 @@ urlpatterns = [
     path("payment_gateway", views.payment_gateway, name = "payment_gateway"),
     path("payment", views.payment, name = "payment"),
     path('logout/', views.logout_view, name='logout'),
+    path('pup/', views.dynamic_label_view, name='dynamic_label_view'),
+    path('update_label/', views.update_label, name='update_label'),
 ]

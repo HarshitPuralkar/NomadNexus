@@ -1,0 +1,20 @@
+<!-- my_template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Alert Example</title>
+    <script>
+        window.onload = function() {
+            const message = "{{ message|escapejs }}";  // Escape the message to prevent issues
+            if (message) {
+                alert(message);
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Welcome to My Page</h1>
+</body>
+</html>

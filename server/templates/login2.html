@@ -23,7 +23,7 @@
                 <input type="password" placeholder="New Password" name="pass" id = "password" class="password-field">
                 <input type="password" placeholder="Confirm Password" name="pass2">
                 <button class="sign-button" name="sign-up">Sign Up</button>
-                <label id="dynamicLabel"></label>
+                <label id="dynamicLabel" style="color: red; font-weight: bold;"></label>
 
             </form>
         </div>
@@ -36,7 +36,6 @@
                 <input type="password" placeholder="Password"  name="pass">
                 <a href="#">Forget Password?</a>
                 <button class="sign-button" name="login">Sign In</button>
-                <label>{{error}}</label>
             </form>
         </div>
         
@@ -57,12 +56,6 @@
     </div>
 
     <script>
-      const errorMessage = "{{ error|default:''|escapejs }}";
-            if (errorMessage) {
-                alert(errorMessage);
-            }
-
-
         $(document).ready(function() {
             $('#password').on('input', function() {
                 const inputText = $(this).val();
