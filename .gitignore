@@ -1,4 +1,5 @@
 ./server/Nomad_nexus/__pycache__/*.*
 ./server/NomadNexus/* 
+./server/db.sqlite3
 .env
 
